@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../Product/AppContext';
-import { useSelector } from 'react-redux';
+
 function Header() {
     const navigate = useNavigate();
     function handleLogout() {
@@ -10,7 +10,7 @@ function Header() {
         localStorage.removeItem('token');
         navigate('/');
     }
-    let totalCartItem = useSelector(state => state.totalCartItem.total);
+ 
     let cartTotalItem = useContext(AppContext).cartTotalItem;
     function renderLogin() {
         let user = localStorage.getItem('user');

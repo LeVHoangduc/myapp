@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 function ListComment(props) {
     let { dataComment } = props;
     const mainCommentData = dataComment.filter((value) => {
-        return value.id_comment == 0;
+        return value.id_comment === 0;
     });
     const subCommentData = dataComment.filter((value) => {
-        return value.id_comment != 0;
+        return value.id_comment !== 0;
     });
     function fetchMainComment() {
         if (mainCommentData) {
@@ -40,7 +40,7 @@ function ListComment(props) {
     function fetchSubComment(idComment) {
         if (subCommentData) {
             return subCommentData.map((value, key) => {
-                if (value.id_comment == idComment) {
+                if (value.id_comment === idComment) {
                     return (
                         <li className="media second-media" key={key}>
                             <Link className="pull-left" to="#">

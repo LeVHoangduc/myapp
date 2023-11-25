@@ -20,7 +20,7 @@ function Cart() {
             .catch((error) => {
                 console.log(error);
             })
-    }, []);
+    }, [cartData]);
     function renderData() {
         return getData.map((item, index) => {
             return (
