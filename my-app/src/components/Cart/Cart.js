@@ -6,6 +6,7 @@ import { totalCartItem } from '../../actions/totalCartItem';
 function Cart() {
     const [getData, setData] = useState([]);
     const getCart = JSON.parse(localStorage.getItem('cart'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     let cartData = {};
     if (getCart) {
         Object.keys(getCart).forEach(function (key) {
